@@ -1,5 +1,5 @@
 
-public class CircularList<E> extends AbstractList<E>{
+public class CircularList<E> implements iPila<E>{
 	protected Node<E> tail; 
 	protected int count;
 
@@ -25,7 +25,7 @@ public class CircularList<E> extends AbstractList<E>{
 	   count++;
 	}
 	
-	public E removeFirst(){
+	public E pop(){
 		E x= null;
 		if (tail.nextElement == null){
 			x= (E) tail;
@@ -37,7 +37,7 @@ public class CircularList<E> extends AbstractList<E>{
 	}
 
 
-	public void add(E value)
+	public void push(E value)
 	// pre: value non-null
 	// post: adds element to tail of list
 	{
@@ -71,7 +71,11 @@ public class CircularList<E> extends AbstractList<E>{
 	}
 	
 	public int size(){
-		return size();
+		return count;
+	}
+	
+	public boolean isEmpty(){
+		return count==0;
 	}
 
 }

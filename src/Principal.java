@@ -15,9 +15,10 @@ public class Principal {
 		Principal x = new Principal();
 		String hola= x.lectura();
 		Scanner teclado= new Scanner(System.in);
-		System.out.println("Desea que los datos se guarden en un vector (1) o ArrayList(2)");
-		int resp= teclado.nextInt();
-		Calculadora calc= new Calculadora(hola, 1);
+		//System.out.println("Desea que los datos se guarden en un vector (1) o ArrayList(2), listaSimple(3), lista doble(4)"
+				//+ "lista circular(5)");
+		//int resp= teclado.nextInt();
+		Calculadora calc= new Calculadora(hola, 4);
 		System.out.println(calc.operar(hola));
 		
 		

@@ -71,7 +71,7 @@ public class Calculadora implements iCalculadora{
 			miStack.push(datos[x]);
 			x++;
 		}
-		a= Double.parseDouble(miStack.pop());
+		a= Double.parseDouble((String)miStack.pop());
 		System.out.println(a);
 		while (miStack.isEmpty()==false){
 			b= Double.parseDouble(miStack.pop());

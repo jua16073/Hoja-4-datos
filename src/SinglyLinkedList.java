@@ -1,4 +1,4 @@
-public class SinglyLinkedList<E> extends AbstractList<E>
+public class SinglyLinkedList<E> implements iPila<E>
 {
 
    protected int count; // list size
@@ -26,7 +26,7 @@ public class SinglyLinkedList<E> extends AbstractList<E>
      count++;
   }
   
-  public E removeFirst()
+  public E pop()
   // pre: list is not empty
   // post: removes and returns value from beginning of list
  {
@@ -43,7 +43,7 @@ public class SinglyLinkedList<E> extends AbstractList<E>
       return head.value();
   }
   
-  public void add(E value)
+  public void push(E value)
   // post: adds value to end of list
   {
       // location for new value
@@ -77,5 +77,9 @@ public class SinglyLinkedList<E> extends AbstractList<E>
           finger = finger.next();
       }
       return finger != null;
+   }
+   
+   public boolean isEmpty(){
+	   return count==0;
    }
 }

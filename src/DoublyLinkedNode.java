@@ -21,5 +21,9 @@ public class DoublyLinkedNode<E>{
 	{
 	    this(v,null,null);
 	}
+	
+	public E value(){
+		return data;
+	}
 }
 

@@ -1,4 +1,4 @@
-public class DoublyLinkedList<E> extends AbstractList<E>{
+public class DoublyLinkedList<E> implements iPila<E>{
 	protected int count;
 	protected DoublyLinkedNode<E> head;
 	protected DoublyLinkedNode<E> tail;
@@ -23,10 +23,12 @@ public class DoublyLinkedList<E> extends AbstractList<E>{
 	   count++;
 	}
 	
-	public E removeFirst(){
-		E x= (E)head;
+	public E pop(){
+		DoublyLinkedNode <E> x= head;
+		if (head.nextElement!=null)
 		head=head.nextElement;
-		return x;
+		count--;
+		return x.value();
 	}
 	
 	public E getFirst(){
@@ -34,7 +36,7 @@ public class DoublyLinkedList<E> extends AbstractList<E>{
 	}
 
 
-	public void add(E value)
+	public void push(E value)
 	// pre: value is not null
 	// post: adds new value to tail of list
 	{
@@ -46,7 +48,11 @@ public class DoublyLinkedList<E> extends AbstractList<E>{
 	}
 	
 	public int size(){
-		return size();
+		return count;
+	}
+	
+	public boolean isEmpty(){
+		return count==0;
 	}
 	
 }
