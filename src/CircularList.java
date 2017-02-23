@@ -26,14 +26,10 @@ public class CircularList<E> implements iPila<E>{
 	}
 	
 	public E pop(){
-		E x= null;
-		if (tail.nextElement == null){
-			x= (E) tail;
-			tail.setValue(null);
-		}
-		else
-			tail.setNext(tail);
-		return x;
+		Node<E> x= tail.nextElement;
+		tail= tail.nextElement;
+		count--;
+		return x.value();
 	}
 
 

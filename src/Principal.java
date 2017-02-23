@@ -18,7 +18,7 @@ public class Principal {
 		//System.out.println("Desea que los datos se guarden en un vector (1) o ArrayList(2), listaSimple(3), lista doble(4)"
 				//+ "lista circular(5)");
 		//int resp= teclado.nextInt();
-		Calculadora calc= new Calculadora(hola, 4);
+		Calculadora calc= new Calculadora(hola, 5);
 		System.out.println(calc.operar(hola));
 		
 		
