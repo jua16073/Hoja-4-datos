@@ -7,13 +7,15 @@
 
 public class Calculadora implements iCalculadora{
 	
-	iPila <String> miStack= new StackVector<String>();
+	iPila <String> miStack;
+	Factory factory = new Factory();
 	double a;
 	double b;
 	
-	public Calculadora(String n){
+	public Calculadora(String n, int dec){
 		a=0;
 		b=0;
+		miStack=  factory.factory(dec);
 	}
 	
 
